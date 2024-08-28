@@ -1,0 +1,347 @@
+.stages {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  &__top {
+    margin-bottom: 65px;
+  }
+  &__title {
+    margin-bottom: 16px;
+  }
+  &__subtitle {
+    font-size: 18px;
+    color: var(--color-gray);
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__box {
+    &-top {
+      padding: 25px;
+      margin-bottom: 25px;
+      width: 100%;
+      border: 1px solid #e9e9e9;
+    }
+    &-title {
+      color: var(--primary-color);
+      margin-bottom: 12px;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 40px;
+    }
+    &-description {
+      line-height: 25px;
+    }
+    &-body {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 33px;
+    }
+  }
+  &__item {
+    position: relative;
+    border: 1px solid #e9e9e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    padding-left: 8px;
+    padding-right: 8px;
+    &-plus {
+      position: relative;
+      text-align: center;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 50%;
+        right: -30px;
+        background: url('../images/plus.png') no-repeat;
+        background-position: center;
+        background-size: cover;
+        z-index: 2;
+      }
+      &:nth-last-child(2):before {
+        width: 32px;
+        height: 32px;
+        right: -33px;
+        background: url('../images/equal.png') no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+    &-image {
+      margin-bottom: 12px;
+    }
+    &-name {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--color-gray);
+    }
+    &-btn {
+      font-size: 10px;
+      line-height: 18px;
+      padding: 20px;
+    }
+    &-last {
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      gap: 36px;
+      background-color: var(--color-gray-alt);
+    }
+    &-total {
+      font-weight: 500;
+      color: var(--color-gray);
+    }
+    &-price {
+      display: flex;
+      flex-direction: column;
+      & b {
+        font-weight: 600;
+      }
+      &__new {
+        font-size: 34px;
+      }
+      &__old {
+        text-decoration: line-through;
+      }
+    }
+    &-bottom {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 8px;
+      &__text {
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .stages {
+    padding-top: 85px;
+    padding-bottom: 90px;
+    &__top {
+      margin-bottom: 50px;
+    }
+    &__subtitle {
+      font-size: 16px;
+    }
+    &__box {
+      &-top {
+        padding: 22px;
+        margin-bottom: 22px;
+      }
+      &-title {
+        margin-bottom: 10px;
+        font-size: 24px;
+        line-height: 36px;
+      }
+      &-description {
+        font-size: 14px;
+        line-height: 22px;
+      }
+      &-body {
+        gap: 27px;
+      }
+    }
+    &__item {
+      &-btn {
+        font-size: 7px;
+        line-height: 14px;
+        padding: 14px;
+      }
+      &-plus {
+        &::before {
+          content: "";
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          top: 50%;
+          right: -23px;
+        }
+        &:nth-last-child(2):before {
+          width: 22px;
+          height: 22px;
+          right: -26px;
+        }
+      }
+      &-image {
+        max-width: 100px;
+        max-height: 120px;
+        margin-bottom: 10px;
+      }
+      &-name {
+        font-size: 12px;
+        line-height: 20px;
+      }
+      &-last {
+        padding: 16px 20px;
+        gap: 24px;
+      }
+      &-total {
+        font-size: 14px;
+      }
+      &-price {
+        &__new {
+          font-size: 24px;
+        }
+        &__old {
+          font-size: 14px;
+        }
+      }
+      &-bottom {
+        &__text {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@include phablet {
+  .stages {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    &__top {
+      margin-bottom: 36px;
+    }
+    &__title {
+      margin-bottom: 12px;
+      & br {
+        display: none;
+      }
+    }
+    &__subtitle {
+      font-size: 14px;
+    }
+    &__box {
+      &-top {
+        padding: 16px;
+        margin-bottom: 20px;
+      }
+      &-title {
+        margin-bottom: 6px;
+        font-size: 20px;
+        line-height: 32px;
+      }
+      &-description {
+        font-size: 13px;
+        line-height: 21px;
+      }
+      &-body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px 26px;
+      }
+    }
+    &__item {
+      padding: 14px 40px;
+      &-plus {
+        &:nth-child(2):before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .stages {
+    padding-top: 48px;
+    padding-bottom: 52px;
+    &__top {
+      margin-bottom: 32px;
+    }
+    &__title {
+      max-width: 400px;
+      margin: 0px auto;
+      margin-bottom: 12px;
+    }
+    &__subtitle {
+      font-size: 13px;
+      text-align: center;
+    }
+    &__body {
+      gap: 24px;
+    }
+    &__box {
+      &-top {
+        padding: 14px;
+        margin-bottom: 18px;
+      }
+      &-title {
+        margin-bottom: 4px;
+        font-size: 16px;
+        line-height: 28px;
+      }
+      &-body {
+        gap: 32px;
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    &__item {
+      padding: 15px 36px;
+      &-image {
+        max-width: 90px;
+        max-height: 110px;
+      }
+      &-name {
+        font-size: 12px;
+        line-height: 19px;
+      }
+      &-plus {
+        &::before {
+          content: "";
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          top: auto;
+          left: auto;
+          right: auto;
+          bottom: -24px;
+        }
+        &:nth-child(2):before {
+          display: block;
+        }
+        &:nth-last-child(2):before {
+          width: 22px;
+          height: 22px;
+          top: auto;
+          left: auto;
+          right: auto;
+          bottom: -26px;
+        }
+      }
+      &-last {
+        padding: 15px;
+        gap: 20px;
+      }
+      &-total {
+        font-size: 14px;
+      }
+      &-price {
+        &__new {
+          font-size: 24px;
+        }
+        &__old {
+          font-size: 14px;
+        }
+      }
+      &-bottom {
+        gap: 6px;
+        &__text {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}

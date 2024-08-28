@@ -1,0 +1,83 @@
+.succes {
+  height: 100vh;
+  @include align-center;
+  justify-content: center;
+  &__inner {
+    @include align-center;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+  &__title {
+    font-size: 52px;
+    font-weight: 700;
+  }
+  &__btn {
+    padding: 24px 40px;
+  }
+}
+
+@include desktop {
+  .succes {
+    &__title {
+      font-size: 46px;
+    }
+    &__btn {
+      font-size: 11px;
+    }
+  }
+}
+
+@include tablet {
+  .succes {
+    &__title {
+      font-size: 40px;
+    }
+    &__inner {
+      gap: 25px;
+    }
+    &__btn {
+      padding: 20px 34px;
+      font-size: 10px;
+    }
+  }
+}
+
+@include phablet {
+  .succes {
+    &__title {
+      font-size: 34px;
+    }
+    &__inner {
+      gap: 22px;
+    }
+    &__btn {
+      padding: 18px 30px;
+      font-size: 9px;
+      & svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .succes {
+    &__title {
+      font-size: 28px;
+    }
+    &__inner {
+      gap: 18px;
+    }
+    &__btn {
+      padding: 17px 29px;
+      font-size: 8px;
+      gap: 9px;
+      & svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

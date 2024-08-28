@@ -1,0 +1,61 @@
+.methods__accordion {
+  &-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 34px;
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  &-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 5px 30px;
+    padding: 12px 18px;
+    background-color: var(--color-light);
+    outline: 1px solid #e9e9e9;
+    outline-offset: -6px;
+    &__image {
+      max-width: 70px;
+      border-radius: 8px;
+    }
+    &__text {
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 500;
+    }
+    &.active {
+      background-color: var(--primary-color);
+      color: var(--color-light);
+    }
+  }
+  &-content {
+    display: none;
+    animation: methods-animation var(--transition-duration);
+    border-radius: 5px 30px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, .1);
+    background-color: var(--color-light);
+    outline: 1px solid #e9e9e9;
+    outline-offset: -6px;
+    padding: 24px 24px 30px;
+    gap: 25px;
+    &.active {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@keyframes methods-animation {
+  from {
+    opacity: 0;
+  } 
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,149 @@
+html,
+body {
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.375;
+  font-family: var(--font-family);
+  font-weight: 400;
+  color: var(--color-dark);
+  position: relative;
+  scrollbar-gutter: stable;
+}
+
+a,
+input,
+button,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+@include tablet {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.first-screen {
+  position: relative;
+}
+
+.container {
+  position: relative;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 22px;
+  z-index: 2;
+  @include mobile {
+    padding: 0 18px;
+  }
+}
+
+.section-offset {
+  padding: 70px 0px;
+  @include tablet {
+    padding: 62px 0px 70px 0px;
+  }
+  @include phablet {
+    padding: 54px 0px 60px 0px;
+  }
+  @include mobile {
+    padding: 42px 0px 50px 0px;
+  }
+}
+
+.section-top {
+  position: relative;
+  padding: 48px 0px 0px 55px;
+  &__title {
+    font-size: 34px;
+    line-height: 52px;
+    font-weight: 700;
+    & span {
+      color: var(--primary-color);
+    }
+  }
+  &__line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 5px solid var(--primary-color);
+    border-left: 5px solid var(--primary-color);
+    width: 105px;
+    height: 105px;
+  }
+  @include tablet {
+    padding: 40px 0px 0px 34px;
+    &__title {
+      font-size: 26px;
+      line-height: 38px;
+    }
+  }
+  @include phablet {
+    padding: 0px;
+    &__title {
+      font-size: 24px;
+      line-height: 36px;
+    }
+    &__line {
+      display: none;
+    }
+  }
+  @include mobile {
+    &__title {
+      font-size: 20px;
+      line-height: 32px;
+      text-align: center;
+    }
+  }
+}
+
+.primary-btn {
+  color: var(--color-light);
+  border-radius: 50px;
+  padding: 28px 52px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background-color: var(--primary-color);    
+  background: linear-gradient(180deg, var(--secondary-color), var(--primary-color));
+  outline: 1px solid rgba(255, 255, 255, 0.4);
+  outline-offset: -6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-transform: uppercase;
+  & svg {
+    margin-top: 2px;
+  }
+  &:focus {
+    outline: 1px solid rgba(255, 255, 255, 0.4);
+    outline-offset: -6px;
+  }
+  @include desktop {
+    padding: 26px 46px;
+    font-size: 12px;
+  }
+  @include tablet {
+    font-size: 11px;
+  }
+  @include phablet {
+    padding: 24px 40px;
+    font-size: 10px;
+    gap: 12px;
+    & svg {
+      margin-top: 0px;
+      width: 6px;
+      height: 9px;
+    }
+  }
+  @include mobile {
+    padding: 20px 36px;
+    font-size: 8px;
+  }
+}

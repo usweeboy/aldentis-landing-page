@@ -1,0 +1,158 @@
+.fair-prices {
+  background-image: url('../images/ask-question-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--primary-color);
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+  &__content {
+    flex-basis: 80%;
+    max-width: 80%;
+  }
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  &__description {
+    max-width: 880px;
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--color-gray);
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  &__image {
+    display: none;
+  }
+}
+
+.fair-prices .appointment__doctor {
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+@include desktop {
+  .fair-prices {
+    &__description {
+      max-width: 800px;
+    }
+  }
+  .fair-prices .appointment__doctor {
+    top: -40px;
+  }
+}
+
+@include tablet {
+  .fair-prices {
+    &__inner {
+      flex-direction: column;
+      gap: 0px;
+      padding-bottom: 30px;
+    }
+    &__title {
+      font-size: 27px;
+    }
+    &__description {
+      margin-bottom: 30px;
+    }
+    &__content {
+      text-align: center;
+      flex-basis: 100%;
+      max-width: 100%;
+      margin-bottom: 36px;
+    }
+    &__bottom {
+      justify-content: center;
+    }  
+    &__image {
+      display: block;
+      max-width: 500px;
+    }
+  }
+  .fair-prices .appointment__doctor {
+    top: -30px;
+    display: block;
+    flex-basis: 35%;
+    max-width: 35%;
+  }
+}
+
+@include phablet {
+  .fair-prices {
+    &__title {
+      font-size: 24px;
+      line-height: 35px;
+    }
+    &__description {
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+    &__content {
+      margin-top: -10px;
+      margin-bottom: 30px;
+    }
+    &__bottom {
+      justify-content: center;
+      gap: 14px;
+    }
+    &__btn {
+      &-image {
+        max-width: 65px;
+        max-height: 95px;
+      }
+    }
+    &__image {
+      max-width: 400px;
+    }
+  }
+  .fair-prices .appointment__doctor {
+    flex-basis: 45%;
+    max-width: 45%;
+  }
+}
+
+@include mobile {
+  .fair-prices {
+    &__title {
+      font-size: 20px;
+      line-height: 30px;
+      max-width: 300px;
+      margin: 0px auto;
+      margin-bottom: 6px;
+    }
+    &__description {
+      max-width: 450px;
+      font-size: 13px;
+      line-height: 23px;
+      margin-bottom: 22px;
+    }
+    &__content {
+      margin-top: -15px;
+      margin-bottom: 30px;
+    }
+    &__bottom {
+      justify-content: center;
+      gap: 14px;
+    }
+    &__btn {
+      &-image {
+        display: none;
+      }
+    }
+    &__image {
+      max-width: 80%;
+    }
+  }
+  .fair-prices .appointment__doctor {
+    flex-basis: 57%;
+    max-width: 57%;
+  }
+}

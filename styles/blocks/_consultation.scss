@@ -1,0 +1,151 @@
+.consultation {
+  background-image: url('../images/ask-question-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    font-size: 30px;
+    line-height: 45px;
+    margin-bottom: 16px;
+  }
+  &__subtitle {
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--color-gray);
+    max-width: 550px;
+  }
+  &__content {
+    display: flex;
+    flex-basis: 70%;
+    max-width: 70%;
+    gap: 16px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    &-input {
+      font-size: 16px !important;
+      &::placeholder {
+        font-size: 16px !important;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .consultation {
+    padding: 40px 0px 30px 0px;
+    &__title {
+      font-size: 24px;
+      line-height: 36px;
+      max-width: 500px;
+      margin: 0px auto;
+      margin-bottom: 12px;
+    }
+    &__subtitle {
+      font-size: 16px;
+      line-height: 26px;
+      max-width: 500px;
+      margin: 0px auto;
+    }
+    &__content {
+      text-align: center;
+      flex-direction: column;
+    }
+    &__form {
+      max-width: 550px;
+      margin: 0px auto;
+    }
+  }
+}
+
+@include tablet {
+  .consultation {
+    &__title {
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    &__content {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+    &__doctor {
+      display: none;
+    }
+    &__form {
+      &-input {
+        padding: 20px 30px;
+        font-size: 14px !important;
+        &::placeholder {
+          font-size: 14px !important;
+        }
+      }
+    }
+  }
+}
+
+@include phablet {
+  .consultation {
+    padding: 32px 0px;
+    &__content {
+      gap: 24px;
+    }
+    &__title {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    &__subtitle {
+      font-size: 14px;
+      line-height: 22px;
+    }
+    &__form {
+      gap: 16px;
+      &-input {
+        font-size: 12px !important;
+        &::placeholder {
+          font-size: 12px !important;
+        }
+      }
+      &-policy {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .consultation {
+    padding: 28px 0px;
+    &__content {
+      gap: 20px;
+    }
+    &__title {
+      font-size: 18px;
+      line-height: 25px;
+      margin-bottom: 10px;
+    }
+    &__subtitle {
+      font-size: 11px;
+      line-height: 19px;
+    }
+    &__form {
+      gap: 14px;
+      &-input {
+        font-size: 12px;
+        padding: 16px 24px;
+        &::placeholder {
+          font-size: 4px;
+        }
+      }
+      &-policy {
+        font-size: 9px;
+      }
+    }
+  }
+}

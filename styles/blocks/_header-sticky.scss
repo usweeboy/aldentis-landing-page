@@ -1,0 +1,104 @@
+.header-sticky {
+  display: none;
+  position: fixed;
+  background-color: var(--color-light);
+  z-index: 999;
+  left: 0;
+  right: 0;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, .1);
+  outline: 1px solid rgba(255, 255, 255, 0.4);
+  outline-offset: -6px;
+  padding: 14px 0px;
+  animation: header-show var(--transition-duration) ease-in-out;
+  &.active {
+    display: block;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  &__logo {
+    margin-top: -6px;
+  }
+  &__btn {
+    font-size: 11px;
+    padding: 22px 44px;
+    gap: 12px;
+  }
+}
+
+@keyframes header-show {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  } 
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@include desktop {
+  .header-sticky {
+    &__btn {
+      display: none;
+    }
+  }
+}
+
+@include tablet {
+  .header-sticky {
+    padding: 12px 0px;
+    &__logo {
+      max-width: 130px;
+    }
+    &__content {
+      gap: 30px;
+    }
+  } 
+}
+
+@include phablet {
+  .header-sticky {
+    padding: 13px 0px;
+    &__logo {
+      max-width: 110px;
+    }
+    &__content {
+      gap: 15px;
+    }
+    & .header__affiliates {
+      display: flex;
+    }
+    & .header__info {
+      display: none;
+    }
+    &__logo {
+      & img {
+        max-width: 130px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .header-sticky {
+    padding: 14px 0px;
+    & .container {
+      padding: 0px 14px;
+    }
+    &__logo {
+      margin-top: -2px;
+      max-width: 100px;
+    }
+    &__content {
+      gap: 12px;
+    }
+  } 
+}

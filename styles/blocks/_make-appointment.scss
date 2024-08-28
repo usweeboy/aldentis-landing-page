@@ -1,0 +1,148 @@
+.make-appointment {
+  padding: 100px 0px;
+  &__inner {
+    @include align-center;
+  }
+  &__body {
+    flex-basis: 58.33%;
+    padding-right: 15px;
+  }
+  &__content {
+    margin-bottom: 54px;
+  }
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__subtitle {
+    margin-bottom: 24px;
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--color-gray);
+    max-width: 440px;
+    &-accent {
+      color: var(--secondary-alt-color);
+      font-weight: 500;
+    }
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+  }
+  &__btn {
+    position: relative;
+    z-index: 2;
+    &-images {
+      @include align-center;
+      gap: 8px;
+      z-index: 1;
+      position: relative;
+      right: 30px;
+      & img {
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+      }
+    }
+  }
+  &__aside {
+    background-color: var(--color-gray-alt);
+    padding: 40px 0px 0px 0px;  
+    flex-basis: 41.66%;
+    &-image {
+      width: 100%;
+      object-fit: cover;
+      position: relative;
+      left: -45px;
+    }
+    &-text {
+      max-width: 550px;
+      padding: 30px 30px 40px 30px;
+      font-size: 16px;
+      line-height: 30px;
+      font-weight: 400;
+      color: var(--color-gray);
+    }
+  }
+}
+
+@include desktop {
+  .make-appointment {
+    &__content {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@include tablet {
+  .make-appointment {
+    padding: 80px 0px 80px 0px;
+    &__inner {
+      flex-direction: column;
+    }
+    &__body {
+      flex-basis: 100%;
+      width: 100%;
+    }
+    &__title {
+      & br {
+        display: none;
+      }
+    }
+    &__subtitle {
+      max-width: 100%;
+    }
+    &__aside {
+      display: none;
+      flex-basis: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@include phablet {
+  .make-appointment {
+    padding: 65px 0px;
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__subtitle {
+      font-size: 14px;
+      line-height: 26px;
+      margin-bottom: 16px;
+    }
+    &__btn {
+      &-images {
+        & img {
+          width: 64px;
+          height: 90px;
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .make-appointment {
+    padding: 40px 0px 55px 0px;
+    &__title {
+      margin-bottom: 15px;
+    }
+    &__subtitle {
+      text-align: center;
+      font-size: 12px;
+      line-height: 20px;
+      margin: 0 auto;
+      margin-bottom: 14px;
+      max-width: 400px;
+    }
+    &__content {
+      margin-bottom: 24px;
+    }
+    &__bottom {
+      justify-content: center;
+    }
+    &__btn {
+      &-images {
+        display: none;
+      }
+    }
+  }
+}

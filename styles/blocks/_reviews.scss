@@ -1,0 +1,126 @@
+.reviews {
+  padding-top: 90px;
+  &__top {
+    margin-bottom: 54px;
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    } 
+  }
+  &__notice {
+    background-color: var(--color-gray-alt);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-radius: 1px;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 40px 45px;
+    & span {
+      color: var(--primary-color);
+      font-weight: 800;
+      font-size: 40px;
+    }
+  }
+  &__subtitle {
+    font-size: 18px;
+    color: var(--color-gray);
+    line-height: 28px;
+  }
+  &__body {
+    display: flex;
+    justify-content: center;
+  }
+  &__video {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    & video {
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+@include desktop {
+  .reviews {
+    &__notice {
+      gap: 10px;
+      font-size: 13px;
+      line-height: 21px;
+      padding: 30px 36px;
+      & span {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .reviews {
+    padding-top: 75px;
+    &__top {
+      margin-bottom: 36px;
+      &-content {
+        margin-bottom: 16px;
+      }
+    }
+    &__title {
+      & br {
+        display: none;
+      }
+    }
+    &__subtitle {
+      font-size: 16px;
+    }
+    &__notice {
+      display: none;
+    }
+  }
+}
+
+@include phablet {
+  .reviews {
+    padding-top: 50px;
+    &__top {
+      margin-bottom: 30px;
+      &-content {
+        margin-bottom: 10px;
+      }
+    }
+    &__title {
+      text-align: center;
+      margin: 0px auto;
+      & br {
+        display: block;
+      }
+    }
+    &__subtitle {
+      text-align: center;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}
+
+@include mobile {
+  .reviews {    
+    padding-top: 38px;
+    &__top {
+      margin-bottom: 24px;
+      &-content {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 8px;
+      }
+    }
+    &__subtitle {
+      text-align: center;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}

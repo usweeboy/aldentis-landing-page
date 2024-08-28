@@ -1,0 +1,35 @@
+// Base
+@import 
+  './base/reset',
+  './base/fonts',
+  './base/vars',
+  './base/mixins',
+  './base/media',
+  './base/base'
+;
+
+// Blocks
+@import 
+  './blocks/header',
+  './blocks/header-sticky',
+  './blocks/hero',
+  './blocks/fair-prices',
+  './blocks/steps',
+  './blocks/methods',
+  './blocks/methods-accordion',
+  './blocks/consultation',
+  './blocks/reviews',
+  './blocks/stop-aging',
+  './blocks/awards',
+  './blocks/employees',
+  './blocks/specialization',
+  './blocks/diagnostics',
+  './blocks/stages',
+  './blocks/faq',
+  './blocks/appointment',
+  './blocks/contacts',
+  './blocks/make-appointment',
+  './blocks/footer',
+  './blocks/modal',
+  './blocks/succes'
+;

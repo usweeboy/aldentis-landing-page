@@ -1,0 +1,277 @@
+.appointment {
+  padding-top: 45px;
+  background-image: url('../images/ask-question-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  &__content {
+    flex-basis: 60%;
+    max-width: 60%;
+  }
+  &__doctor {
+    position: relative;
+    flex-basis: 25%;
+    max-width: 25%;
+    top: -70px;
+    text-align: center;
+    max-width: 300px;
+    &-image {
+      width: 100%;
+      position: relative;
+      object-fit: cover;
+      z-index: 1;
+    }
+    &-experience {
+      width: 72px;
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: center;
+      background-color: var(--primary-color);
+      color: var(--color-light);
+      font-size: 12px;
+      line-height: 18px;
+      padding: 28px 0px;
+      &::before, &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-bottom: 10px solid transparent;
+        right: 0;
+        position: absolute;
+        bottom: -9px;
+        border-right: 40px solid var(--primary-color);
+      }
+      &::after {
+        right: auto;
+        left: 0;
+        border-right: none;
+        border-left: 40px solid var(--primary-color);
+      }
+    }
+    &-name {
+      margin-top: 24px;
+      font-size: 18px;
+      line-height: 25px;
+      display: block;
+      margin-bottom: 6px;
+    }
+    &-profession {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &-feature {
+      margin-top: 6px;
+      @include align-center;
+      justify-content: center;
+      gap: 8px;
+      & span {
+        font-weight: 500;
+        line-height: 22px;
+      }
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &-box {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    &-input {
+      border: 1px solid rgba(108, 136, 142, 0.7);
+      font-size: 18px;
+      padding: 25px 35px;
+      border-radius: 50px;
+      resize: none;
+      &::placeholder {
+        color: var(--color-gray);
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 400;
+      }
+      &:focus {
+        outline: none !important;
+        border: 1px solid var(--color-dark);
+      }
+    }
+    &-policy {
+      font-size: 12px;
+      line-height: 18px;
+      text-align: center;
+      font-weight: 500;
+      color: var(--secondary-alt-color);
+      & a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .appointment {
+    padding: 40px 0px 30px 0px;
+    align-items: center;
+    &__title {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    &__inner {
+      align-items: center;
+    }
+    &__form {
+      &-input {
+        font-size: 16px;
+        padding: 22px 32px;
+        &::placeholder {
+          font-size: 12px;
+        }
+      }
+    }
+    &__doctor {
+      top: 0px;
+      &-experience {
+        width: 62px;
+        padding: 20px 0px;
+        font-size: 11px;
+      }
+      &-name {
+        font-size: 16px;
+        line-height: 22px;
+      }
+      &-profession {
+        font-size: 14px;
+        line-height: 20px;
+      }
+      &-feature {
+        margin-top: 5px;
+        gap: 6px;
+        & img {
+          width: 18px;
+          height: 18px;
+        }
+        & span {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .appointment {
+    &__title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    &__content {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+    &__doctor {
+      display: none;
+      &-experience {
+        width: 70px;
+        padding: 26px 0px;
+        font-size: 12px;
+      }
+    }
+    &__form {
+      &-input {
+        padding: 20px 30px;
+        font-size: 14px;
+        &::placeholder {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@include phablet {
+  .appointment {
+    padding: 32px 0px;
+    &__title {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    &__form {
+      gap: 16px;
+      &-box {
+        gap: 16px;
+      }
+      &-input {
+        &::placeholder {
+          font-size: 10px;
+        }
+      }
+      &-policy {
+        font-size: 10px;
+        line-height: 16px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .appointment {
+    padding: 28px 0px;
+    &__title {
+      font-size: 20px;
+    }
+    &__doctor {
+      &-experience {
+        width: 54px;
+        line-height: 16px;
+        padding: 20px 0px;
+        font-size: 9px;
+      }
+      &-name {
+        font-size: 14px;
+        line-height: 20px;
+      }
+      &-profession {
+        font-size: 12px;
+      }
+      &-feature {
+        gap: 5px;
+        & img {
+          width: 16px;
+          height: 16px;
+        }
+        & span {
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+    }
+    &__form {
+      gap: 16px;
+      &-box {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      &-input {
+        font-size: 12px;
+        padding: 16px 24px;
+        &::placeholder {
+          font-size: 9px;
+        }
+      }
+      &-policy {
+        font-size: 9px;
+        line-height: 15px;
+      }
+    }
+  }
+}

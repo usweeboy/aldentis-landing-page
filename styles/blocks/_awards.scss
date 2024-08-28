@@ -1,0 +1,121 @@
+.awards {
+  padding-top: 100px;
+  &__top {
+    margin-bottom: 36px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  &__item {
+    background-color: var(--color-gray-alt);
+    padding: 50px;
+    text-align: center;
+    &-image {
+      margin-bottom: 26px;
+      height: 240px;
+      max-width: 100%;
+    }
+    &-title {
+      font-size: 24px;
+      line-height: 36px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    &-text {
+      max-width: 470px;
+      margin: 0px auto;
+      color: var(--color-gray);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+}
+
+@include tablet {
+  .awards {
+    padding-top: 90px;
+    &__top {
+      margin-bottom: 52px;
+    }
+    &__item {
+      padding: 40px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      &-image {
+        margin-bottom: 18px;
+        max-width: 200px;
+        height: auto;
+      }
+      &-title {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 12px;
+      }    
+      &-text {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+@include phablet {
+  .awards {
+    padding-top: 70px;
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+    }
+    &__top {
+      margin-bottom: 24px;
+    }
+    &__item {
+      &-image {
+        margin-bottom: 24px;
+        max-width: 200px;
+      }
+      &-title {
+        font-size: 20px;
+        margin-bottom: 16px;
+      }    
+      &-text {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .awards {
+    padding-top: 50px;
+    &__top {
+      margin-bottom: 20px;
+    }
+    &__list {
+      gap: 16px;
+    }
+    &__item {
+      padding: 30px 15px 20px;
+      &-image {
+        margin-bottom: 18px;
+        max-width: 140px;
+      }
+      &-title {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 10px;
+      }    
+      &-text {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,340 @@
+.diagnostics {
+  padding-top: 100px;
+  &__inner {
+    display: flex;
+    gap: 100px;
+  }
+  &__content {
+    flex-basis: 55%;
+    max-width: 55%;
+    order: 2;
+  }
+  &__title {
+    font-size: 30px;
+    line-height: 44px;
+    margin-bottom: 16px;
+  }
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    color: var(--color-gray);
+    margin-bottom: 24px;
+    & span {
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+  }
+  &__aside {
+    position: relative;
+    background-color: var(--color-gray-alt);
+    padding: 40px 0px 20px 0px;
+    flex-basis: 45%;
+    max-width: 45%;
+    &-content {
+      padding-left: 45px;
+      padding-right: 15px;
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    &-item {
+      @include align-center;
+      gap: 14px;
+      &__image {
+        &-logo {
+          min-width: 60px;
+          object-fit: cover;
+          height: 30px;
+        }
+      }
+      &__text {
+        width: 320px;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        & b {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  &__image {
+    width: 100%;
+    position: relative;
+    right: -45px;
+    margin-bottom: 32px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 24px;
+    &-title {
+      color: var(--color-gray);
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 30px;
+      margin-bottom: 16px;
+    }
+  }
+  &__item {
+    position: relative;
+    padding-left: 28px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      top: 6px;
+      left: 0;
+      background-color: var(--color-light);
+      background-image: url('../images/check-icon.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  &__btn {
+    position: relative;
+    z-index: 2;
+    &-images {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 1;
+      position: relative;
+      right: 30px;
+      & img {
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+      }
+    }
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--color-gray);
+  }
+}
+
+@include desktop {
+  .diagnostics {
+    &__inner {
+      align-items: start;
+    }
+    &__content {
+      flex-basis: 60%;
+      max-width: 60%;
+    }
+    &__image {
+      right: -25px;
+      margin-bottom: 25px;
+    }
+    &__aside {
+      flex-basis: 40%;
+      max-width: 40%;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      &-content {
+        padding: 0px 20px;
+        padding-left: 25px;
+      }
+      &-list {
+        gap: 15px;
+      }
+      &-item {
+        gap: 12px;
+        &__image {
+          max-width: 40px;
+        }
+        &__text {
+          font-size: 13px;
+          line-height: 20px;
+        }
+      }
+    }
+    &__list {
+      margin-bottom: 34px;
+    }
+    &__btn {
+      &-images {
+        display: none;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .diagnostics {
+    padding-top: 80px;
+    &__inner {
+      display: flex;
+      align-items: normal;
+      flex-direction: column;
+      gap: 50px;
+    }
+    &__content {
+      flex-basis: 100%;
+      max-width: 100%;
+      order: 1;
+    }
+    &__image {
+      right: 0px;
+      max-width: 660px;
+    }
+    &__aside {
+      order: 2;
+      flex-basis: 100%;
+      max-width: 100%;
+      padding: 36px 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &-content {
+        max-width: 660px;
+      }
+      &-list {
+        gap: 20px;
+      }
+    }
+    &__btn {
+      &-images {
+        display: flex;
+      }
+    }
+  }
+}
+
+@include phablet {
+  .diagnostics {
+    padding-top: 70px;
+    &__title {
+      max-width: 550px;
+      font-size: 28px;
+      line-height: 40px;
+      margin-bottom: 18px;
+    }
+    &__subtitle {
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 22px;
+    }
+    &__list {
+      gap: 18px;
+      &-title {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 12px;
+      }
+    }
+    &__item {
+      padding-left: 25px;
+      font-size: 14px;
+      line-height: 24px;
+      &::before {
+        width: 15px;
+        height: 15px;
+      }
+    }
+    &__aside {
+      &-content {
+        max-width: 700px;
+        padding: 0px 20px;
+      }
+    }
+    &__image {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@include mobile {
+  .diagnostics {
+    padding-top: 50px;
+    &__inner {
+      gap: 30px;
+    }
+    &__title {
+      max-width: 400px;
+      font-size: 21px;
+      line-height: 32px;
+      margin: 0px auto;
+      margin-bottom: 8px;
+    }
+    &__subtitle {
+      font-size: 14px;
+      text-align: center;
+      max-width: 400px;
+      margin: 0px auto;
+      margin-bottom: 22px;
+    }
+    &__list {
+      gap: 17px;
+      margin-bottom: 24px;
+      &-title {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 12px;
+      }
+    }
+    &__item {
+      padding-left: 23px;
+      font-size: 13px;
+    }
+    &__bottom {
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    &__btn {
+      &-images {
+        display: none;
+      }
+    }
+    &__text {
+      font-size: 13px;
+      line-height: 21px;
+      text-align: center;
+      max-width: 400px;
+      margin: 0px auto;
+    }
+    &__image {
+      margin-bottom: 20px;
+    }
+    &__aside {
+      padding: 30px 0px 20px;
+      &-content {
+        width: 100%;
+        padding: 0px 14px;
+      }
+      &-list {
+        gap: 16px;
+      }
+      &-item {
+        gap: 10px;
+        &__image {
+          &-logo {
+            min-width: 50px;
+            height: 25px;
+          }
+          &-flag {
+            max-width: 30px;
+          }
+        }
+        &__text {
+          width: 100%;
+          font-size: 11px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}

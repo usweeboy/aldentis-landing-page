@@ -1,0 +1,300 @@
+.employees {
+  padding-top: 100px;
+  &__top {
+    margin-bottom: 40px;
+  }
+  &-slider {
+    position: relative;
+    &__wrapper {
+      padding: 100px 0px 35px;
+    }
+    &__control {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 12px;
+      color: var(--color-gray);
+      margin-bottom: 20px;
+      &-btn {
+        display: flex;
+        align-items: center;
+      }
+    }
+    &__pagination {
+      font-size: 18px;
+      width: auto !important;
+    }
+    &__btn {
+      display: none;
+    }
+  }
+  &-card {
+    background-color: var(--color-gray-alt);
+    &__content {
+      margin-top: -75px;
+      padding: 25px 50px 55px 50px;
+    }
+    &__image {
+      width: calc(100% - 80px);
+      height: 300px;
+      object-fit: cover;
+      position: relative;
+      top: -80px;
+    }
+    &__experience {
+      width: 80px;
+      position: absolute;
+      top: -30px;
+      right: 0;
+      text-align: center;
+      background-color: var(--primary-color);
+      color: var(--color-light);
+      font-size: 14px;
+      line-height: 20px;
+      padding: 30px 0px;
+      &::before, &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-bottom: 10px solid transparent;
+        right: 0;
+        position: absolute;
+        bottom: -9px;
+        border-right: 40px solid var(--primary-color);
+      }
+      &::after {
+        right: auto;
+        left: 0;
+        border-right: none;
+        border-left: 40px solid var(--primary-color);
+      }
+    }
+    &__profession {
+      font-size: 14px;
+      color: var(--color-gray);
+      margin-bottom: 12px;
+      line-height: 24px;
+    }
+    &__name {
+      font-weight: 700;
+      font-size: 22px;
+      margin-bottom: 12px;
+      line-height: 30px;
+      color: var(--secondary-alt-color)
+    }
+    &__feature {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+  }
+}
+
+@include desktop {
+  .employees {
+    &-slider {
+      &__wrapper {
+        padding: 100px 0px 25px;
+      }
+    }
+    &-card {
+      &__image {
+        height: 250px;
+      }
+      &__content {
+        margin-top: -80px;
+        padding: 25px 40px 30px 40px;
+      }
+      &__experience {
+        font-size: 13px;
+      }
+      &__profession {
+        font-size: 12px;
+        margin-bottom: 8px;
+        line-height: 20px;
+      }
+      &__name {
+        font-size: 18px;
+        margin-bottom: 10px;
+        line-height: 26px;
+      }
+      &__feature {
+        font-size: 12px;
+        margin-bottom: 23px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .employees {
+    padding-top: 90px;
+    &__top {
+      margin-bottom: 34px;
+    }
+    &-slider {
+      &__control {
+        gap: 10px;
+        margin-bottom: 10px;
+        &-btn {
+          & svg {
+            width: 22px;
+            height: 22px;
+          }
+        }
+      }
+      &__pagination {
+        font-size: 16px;
+      }
+    }
+    &-card {
+      &__image {
+        height: 320px;
+      }
+      &__content {
+        max-width: 300px;
+        padding: 25px 33px 30px 33px;
+      }
+      &__experience {
+        font-size: 12px;
+      }
+      &__profession {
+        font-size: 11px;
+        line-height: 19px;
+      }
+      &__feature {
+        font-size: 11px;
+        margin-bottom: 22px;
+      }
+    }
+  }
+}
+
+@include phablet {
+  .employees {
+    padding-top: 75px;
+    &__top {
+      margin-bottom: 30px;
+    }
+    &-slider {
+      &__wrapper {
+        padding: 80px 0px 10px;
+      }
+      &__control {
+        gap: 8px;
+        margin-bottom: 22px;
+        &-btn {
+          & svg {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+      &__pagination {
+        font-size: 14px;
+      }
+    }
+    &-card {
+      &__image {
+        height: 270px;
+      }
+      &__content {
+        max-width: 270px;
+        padding: 23px 30px 28px 30px;
+      }
+      &__profession {
+        font-size: 10px;
+        line-height: 18px;
+      }
+      &__feature {
+        margin-bottom: 20px;
+      }
+      &__name {
+        font-size: 16px;
+        line-height: 22px;
+      }
+      &__image {
+        width: calc(100% - 65px);
+        position: relative;
+        top: -80px;
+      }
+      &__experience {
+        width: 65px;
+        padding: 24px 0px;
+        font-size: 11px;
+        line-height: 17px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .employees {
+    padding-top: 55px;
+    &__top {
+      margin-bottom: 36px;
+    }
+    &-slider {
+      &__control {
+        display: none;
+      }
+      &__wrapper {
+        z-index: 1;
+      }
+      &__btn {
+        z-index: 2;
+        position: absolute;
+        background-color: var(--color-light);
+        border-radius: 100%;
+        border: 1px solid #d2d3d3;
+        box-shadow: 0px 1px 0px 0px rgba(27, 31, 36, 0.04);
+        color: var(--color-gray);
+        padding: 14px;
+        opacity: 0.7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &-prev {
+          top: 50%;
+          left: 8px;
+        }
+        &-next {
+          top: 50%;
+          right: 8px;
+        }
+      }
+    }
+    &-card {
+      text-align: center;
+      &__image {
+        height: 100%;
+      }
+      &__content {
+        max-width: 275px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 21px 30px 27px 30px;
+      }
+      &__image {
+        width: calc(100% - 120px);
+      }
+      &__experience {
+        width: 62px;
+        top: -26px;
+      }
+      &__profession {
+        font-size: 12px;
+        line-height: 20px;
+      }
+      &__name {
+        font-size: 18px;
+        line-height: 24px;
+      }
+      &__feature {
+        font-size: 12px;
+        line-height: 21px;
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
