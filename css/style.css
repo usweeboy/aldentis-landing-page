@@ -439,7 +439,7 @@ body.lock {
 }
 .header__info-item::before {
   content: "";
-  background-image: url("../../images/check-mark.svg");
+  background-image: url("../images/check-mark.svg");
   background-size: cover;
   position: absolute;
   left: 0;
