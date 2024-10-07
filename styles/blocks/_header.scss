@@ -389,11 +389,28 @@
   }
 }
 
-@media (max-width: 425px) {
+@include small-mobile {
   .header {
     &__phone {
       &-icon {
         display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .header {
+    &__logo {
+      margin-top: -3px;
+      max-width: 90px;
+    }
+    &__content {
+      gap: 12px;
+    }
+    &__phone {
+      & span {
+        font-size: 13px;
       }
     }
   }

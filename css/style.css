@@ -740,6 +740,18 @@ body.lock {
     display: none;
   }
 }
+@media (max-width: 360px) {
+  .header__logo {
+    margin-top: -3px;
+    max-width: 90px;
+  }
+  .header__content {
+    gap: 12px;
+  }
+  .header__phone span {
+    font-size: 13px;
+  }
+}
 .header-sticky {
   display: none;
   position: fixed;
@@ -858,11 +870,20 @@ body.lock {
     padding: 0px 14px;
   }
   .header-sticky__logo {
-    margin-top: -2px;
+    margin-top: -4px;
     max-width: 100px;
   }
   .header-sticky__content {
     gap: 12px;
+  }
+}
+@media (max-width: 360px) {
+  .header-sticky__logo {
+    margin-top: -3px;
+    max-width: 90px;
+  }
+  .header-sticky__content {
+    gap: 11px;
   }
 }
 .hero {
