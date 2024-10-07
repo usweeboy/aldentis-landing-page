@@ -1922,7 +1922,7 @@ body.lock {
   text-align: start;
   font-weight: 500;
 }
-.methods__tabs-item.active span {
+.methods__tabs-item.active .methods__tabs-item__triangle {
   display: block;
   height: 40px;
   width: 15px;
@@ -1935,7 +1935,7 @@ body.lock {
   opacity: 1;
   margin-left: -20px;
 }
-.methods__tabs-item.active span::before {
+.methods__tabs-item.active .methods__tabs-item__triangle::before {
   content: "";
   position: absolute;
   width: 40px;
@@ -2206,11 +2206,11 @@ body.lock {
   .methods__tabs-item__text {
     font-size: 12px;
   }
-  .methods__tabs-item.active span {
+  .methods__tabs-item.active .methods__tabs-item__triangle {
     height: 25px;
     margin-top: -10px;
   }
-  .methods__tabs-item.active span::before {
+  .methods__tabs-item.active .methods__tabs-item__triangle::before {
     width: 25px;
     height: 25px;
   }
@@ -2286,7 +2286,7 @@ body.lock {
   .methods__tabs-item__text {
     text-align: center;
   }
-  .methods__tabs-item.active span {
+  .methods__tabs-item.active .methods__tabs-item__triangle {
     right: 0;
     -webkit-transform: rotate(90deg) translateY(8px);
             transform: rotate(90deg) translateY(8px);
@@ -2507,7 +2507,7 @@ body.lock {
   .methods__tabs-item__text {
     text-align: start;
   }
-  .methods__tabs-item.active span {
+  .methods__tabs-item.active .methods__tabs-item__triangle {
     display: none;
   }
   .methods__accordion {
@@ -3704,12 +3704,12 @@ body.lock {
 .specialization__video video {
   width: 100%;
 }
-.specialization__video-play__btn {
+.specialization__video-btn {
   position: absolute;
-  bottom: 20px;
+  bottom: 22px;
   left: 15px;
 }
-.specialization__video-play__btn button {
+.specialization__video-btn div {
   background-color: var(--secondary-color);
   -webkit-box-shadow: inset 0 0 30px hsla(0, 0%, 100%, 0.2);
           box-shadow: inset 0 0 30px hsla(0, 0%, 100%, 0.2);
@@ -3744,15 +3744,15 @@ body.lock {
   .specialization__video {
     left: -30px;
   }
-  .specialization__video-play__btn {
-    bottom: 15px;
+  .specialization__video-btn {
+    bottom: 18px;
     left: 12px;
   }
-  .specialization__video-play__btn button {
+  .specialization__video-btn div {
     width: 70px;
     height: 70px;
   }
-  .specialization__video-play__btn button svg {
+  .specialization__video-btn div svg {
     width: 30px;
     height: 30px;
   }
@@ -3853,15 +3853,15 @@ body.lock {
   .specialization__addresses-text--accent {
     font-size: 11px;
   }
-  .specialization__video-play__btn {
+  .specialization__video-btn {
     bottom: 15px;
     left: 10px;
   }
-  .specialization__video-play__btn button {
+  .specialization__video-btn div {
     width: 50px;
     height: 50px;
   }
-  .specialization__video-play__btn button svg {
+  .specialization__video-btn div svg {
     width: 20px;
     height: 20px;
   }

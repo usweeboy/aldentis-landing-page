@@ -73,29 +73,27 @@
         font-weight: 500;
       }
     }
-    &-item.active {
-      & span {
-        display: block;
-        height: 40px;
-        width: 15px;
+    &-item.active &-item__triangle {
+      display: block;
+      height: 40px;
+      width: 15px;
+      position: absolute;
+      overflow: hidden;
+      z-index: -1;
+      right: -15px;
+      top: 50%;
+      margin-top: -20px;
+      opacity: 1;
+      margin-left: -20px;
+      &::before {
+        content: "";
         position: absolute;
-        overflow: hidden;
-        z-index: -1;
-        right: -15px;
-        top: 50%;
-        margin-top: -20px;
-        opacity: 1;
-        margin-left: -20px;
-        &::before {
-          content: "";
-          position: absolute;
-          width: 40px;
-          height: 40px;
-          background: var(--primary-color);
-          right: 8px;
-          top: 0;
-          transform: rotate(45deg);
-        }
+        width: 40px;
+        height: 40px;
+        background: var(--primary-color);
+        right: 8px;
+        top: 0;
+        transform: rotate(45deg);
       }
     }
   }
@@ -317,14 +315,12 @@
           font-size: 12px;
         }
       }
-      &-item.active {
-        & span {
+      &-item.active &-item__triangle {
+        height: 25px;
+        margin-top: -10px;
+        &::before {
+          width: 25px;
           height: 25px;
-          margin-top: -10px;
-          &::before {
-            width: 25px;
-            height: 25px;
-          }
         }
       }
     }
@@ -382,14 +378,12 @@
           text-align: center;
         }
       }
-      &-item.active {
-        & span {
-          right: 0;
-          transform: rotate(90deg) translateY(8px);
-          top: auto;
-          bottom: -20px;
-          left: 50%;
-        }
+      &-item.active &-item__triangle {
+        right: 0;
+        transform: rotate(90deg) translateY(8px);
+        top: auto;
+        bottom: -20px;
+        left: 50%;
       }
     }
     &__body {
@@ -584,10 +578,8 @@
           text-align: start;
         }
       }
-      &-item.active {
-        & span {
-          display: none;
-        }
+      &-item.active &-item__triangle {
+        display: none;
       }
     }
     &__accordion {

@@ -7,13 +7,10 @@
     Имплантация зубов в Тюмени
   </title>
   <link rel="icon" type="image/x-icon" href="./images/favicon.png">
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
-  />
-  <link rel="preload" as="image" href="./images/logo.png" />
-  <link rel="preload" as="image" href="./images/hero-video.mp4" />
-  <link rel="preload" as="image" href="./images/ask-question-bg.jpg" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+  <link rel="preload" as="image" href="./images/logo.png">
+  <link rel="preload" as="image" href="./images/hero-video.mp4">
+  <link rel="preload" as="image" href="./images/ask-question-bg.jpg">
   <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
@@ -65,7 +62,7 @@
                   <a href="#contacts">Адреса клиник</a>
                 </li>
                 <li class="header__info-item header__info-call">
-                  <a href="#callbackwidget">
+                  <a href="#">
                     <span>Звоните за наш счёт</span>
                   </a>
                 </li>
@@ -122,7 +119,7 @@
                   <a href="#contacts">Адреса клиник</a>
                 </li>
                 <li class="header__info-item header__info-call">
-                  <a href="#callbackwidget">
+                  <a href="#">
                     <span>Звоните за наш счёт</span>
                   </a>
                 </li>
@@ -137,7 +134,7 @@
               >
               <span>+7 3452 65-91-79</span>
             </a>
-            <a href="#callbackwidget" class="primary-btn header-sticky__btn">
+            <a href="#" class="primary-btn header-sticky__btn">
               Позвоните мне
               <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                 <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" />
@@ -262,7 +259,7 @@
               Мы не будем называть низкую цену, чтобы записать вас на приём, где она увеличится в несколько раз. Цены на нашем сайте такие же, как в клинике.
             </p>
             <div class="fair-prices__bottom">
-              <a href="#callbackwidget" class="primary-btn fair-prices__btn">
+              <a href="#" class="primary-btn fair-prices__btn">
                 Узнать подробности
                 <svg width="8" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 5L0 9.33V.67L6 5z" fill="#fff"/></svg>
               </a>
@@ -331,14 +328,18 @@
               target="_blank"
             > 
               <video class="lazy" autoplay muted loop playsinline poster="./images/specialization-video-poster.jpg">
-                <source data-src="./images/specialization-video.mp4" type="video/mp4">
+                <source 
+                  src="./images/specialization-video.mp4" 
+                  data-src="./images/specialization-video.mp4" 
+                  type="video/mp4"
+                >
               </video>
-              <div class="specialization__video-play__btn">
-                <button type="button" title="Воспроизвести видео">
+              <div class="specialization__video-btn">
+                <div>
                   <svg width="36" height="36" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                     <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
                   </svg>                  
-                </button>
+                </div>
               </div>
             </a>
           </div>
@@ -377,7 +378,7 @@
               </li>
             </ul>
             <div class="diagnostics__bottom">
-              <a href="#callbackwidget" class="primary-btn diagnostics__btn">
+              <a href="#" class="primary-btn diagnostics__btn">
                 Записаться на диагностику
                 <svg width="8" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 5L0 9.33V.67L6 5z" fill="#fff"/></svg>
               </a>
@@ -549,7 +550,7 @@
                     <p class="stages__item-bottom__text">
                       за имплант с установкой
                     </p>
-                    <a href="#callbackwidget" class="primary-btn stages__item-btn">
+                    <a href="#" class="primary-btn stages__item-btn">
                       Забронировать цену
                     </a>
                   </div>
@@ -609,7 +610,7 @@
                     <p class="stages__item-bottom__text">
                       за коронку с установкой
                     </p>
-                    <a href="#callbackwidget" class="primary-btn stages__item-btn">
+                    <a href="#" class="primary-btn stages__item-btn">
                       Забронировать цену
                     </a>
                   </div>
@@ -646,11 +647,11 @@
                     class="methods__tabs-item__image"
                     width="115" height="95" loading="lazy"
                   >
-                  <div class="methods__tabs-item__text">
+                  <span class="methods__tabs-item__text">
                     Зуб повреждён <br>
                     и его не сохранить
-                  </div>
-                  <span></span>
+                  </span>
+                  <span class="methods__tabs-item__triangle"></span>
                 </button>
                 <button data-tab="no-tooth" class="tab-btn methods__tabs-item">
                   <img 
@@ -659,10 +660,10 @@
                     class="methods__tabs-item__image"
                     width="115" height="95" loading="lazy"
                   >
-                  <div class="methods__tabs-item__text">
+                  <span class="methods__tabs-item__text">
                     Нет 1-2 зуба
-                  </div>
-                  <span></span>
+                  </span>
+                  <span class="methods__tabs-item__triangle"></span>
                 </button>
                 <button data-tab="complete-adentia" class="tab-btn methods__tabs-item">
                   <img 
@@ -671,10 +672,10 @@
                     class="methods__tabs-item__image"
                     width="115" height="95" loading="lazy"
                   >
-                  <div class="methods__tabs-item__text">
+                  <span class="methods__tabs-item__text">
                     Полная или почти полная адентия
-                  </div>
-                  <span></span>
+                  </span>
+                  <span class="methods__tabs-item__triangle"></span>
                 </button>
               </div>
             </div>
@@ -750,7 +751,7 @@
                       src="./images/methods-content-image-1.jpg"
                       width="278" height="336" loading="lazy"
                     >
-                    <a href="#callbackwidget" class="primary-btn methods__content-item__btn">
+                    <a href="#" class="primary-btn methods__content-item__btn">
                       Это мой случай
                     </a>
                   </div>
@@ -801,7 +802,7 @@
                       src="./images/methods-content-image-2.jpg"
                       width="278" height="336" loading="lazy"
                     >
-                    <a href="#callbackwidget" class="primary-btn methods__content-item__btn">
+                    <a href="#" class="primary-btn methods__content-item__btn">
                       Это мой случай
                     </a>
                   </div>
@@ -852,7 +853,7 @@
                       src="./images/methods-content-image-3.jpg"
                       width="278" height="336" loading="lazy"
                     >
-                    <a href="#callbackwidget" class="primary-btn methods__content-item__btn">
+                    <a href="#" class="primary-btn methods__content-item__btn">
                       Это мой случай
                     </a>
                   </div>
@@ -924,7 +925,7 @@
                       src="./images/methods-content-image-1.jpg"
                       width="220" height="220" loading="lazy"
                     >
-                    <a href="#callbackwidget" class="primary-btn methods__content-item__btn">
+                    <a href="#" class="primary-btn methods__content-item__btn">
                       Это мой случай
                     </a>
                   </div>
@@ -988,7 +989,7 @@
                       src="./images/methods-content-image-2.jpg"
                       width="220" height="220" loading="lazy"
                     >
-                    <a href="#callbackwidget" class="primary-btn methods__content-item__btn">
+                    <a href="#" class="primary-btn methods__content-item__btn">
                       Это мой случай
                     </a>
                   </div>
@@ -1052,7 +1053,7 @@
                       src="./images/methods-content-image-3.jpg"
                       width="220" height="220" loading="lazy"
                     >
-                    <a href="#callbackwidget" class="primary-btn methods__content-item__btn">
+                    <a href="#" class="primary-btn methods__content-item__btn">
                       Это мой случай
                     </a>
                   </div>
@@ -1110,7 +1111,7 @@
                 </p>
               </div>
               <div class="steps__box-bottom">
-                <a href="#callbackwidget" class="primary-btn steps__box-btn">
+                <a href="#" class="primary-btn steps__box-btn">
                   Записаться на приём
                   <svg width="8" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 5L0 9.33V.67L6 5z" fill="#fff"/></svg>
                 </a>
@@ -1276,7 +1277,7 @@
                 </b>
               </div>
               <div class="steps__box-bottom">
-                <a href="#callbackwidget" class="primary-btn steps__box-btn">
+                <a href="#" class="primary-btn steps__box-btn">
                   Узнать подробности
                   <svg width="8" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 5L0 9.33V.67L6 5z" fill="#fff"/></svg>
                 </a>
@@ -1497,7 +1498,11 @@
           <div class="reviews__body">
             <div class="reviews__video"> 
               <video class="lazy" autoplay muted loop playsinline poster="./images/reviews-video-poster.jpg">
-                <source data-src="./images/reviews-video.mp4" type="video/mp4">
+                <source 
+                  src="./images/reviews-video.mp4" 
+                  data-src="./images/reviews-video.mp4" 
+                  type="video/mp4"
+                >
               </video>
             </div>
           </div>
@@ -1540,7 +1545,7 @@
                 Запишитесь на диагностику и узнайте о состоянии вашей костной ткани
               </p>
               <div class="stop-aging__content-box">
-                <a href="#callbackwidget" class="primary-btn stop-aging__btn">
+                <a href="#" class="primary-btn stop-aging__btn">
                   Остановить старение
                   <svg width="8" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 5L0 9.33V.67L6 5z" fill="#fff"/></svg>
                 </a>
@@ -1609,13 +1614,13 @@
           </div>
           <div class="employees-slider swiper">
             <div class="employees-slider__control">
-              <button type="button" class="employees-slider__control-btn" id="employees-slider-btn-prev">
+              <button type="button" class="employees-slider-btn-prev employees-slider__control-btn">
                 <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                   <path fill-rule="evenodd" d="M7.28 7.72a.75.75 0 0 1 0 1.06l-2.47 2.47H21a.75.75 0 0 1 0 1.5H4.81l2.47 2.47a.75.75 0 1 1-1.06 1.06l-3.75-3.75a.75.75 0 0 1 0-1.06l3.75-3.75a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
                 </svg>   
               </button>
               <span class="employees-slider__pagination"></span>
-              <button type="button" class="employees-slider__control-btn" id="employees-slider-btn-next">
+              <button type="button" class="employees-slider-btn-next employees-slider__control-btn">
                 <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                   <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
                 </svg>       
@@ -1784,12 +1789,12 @@
                 </div>
               </div>
             </div>
-            <button class="employees-slider__btn employees-slider__btn-prev" id="employees-slider-btn-prev">
+            <button class="employees-slider-btn-prev employees-slider__btn employees-slider__btn-prev">
               <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
               </svg>
             </button>
-            <button class="employees-slider__btn employees-slider__btn-next" id="employees-slider-btn-next">
+            <button class="employees-slider-btn-next employees-slider__btn employees-slider__btn-next">
               <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
               </svg>
@@ -2089,7 +2094,9 @@
             </ul>
           </div>
           <div id="ymap" class="contacts__map">
-            <script id="ymap-lazy" async data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5f75f8bff4f698dadc31a3e08b8abd85230e7369cbad9028b23d9b0d46eead0e&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+            <script 
+              id="ymap-lazy" 
+              data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5f75f8bff4f698dadc31a3e08b8abd85230e7369cbad9028b23d9b0d46eead0e&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
           </div>
         </div>
       </div>
@@ -2111,13 +2118,13 @@
               </p>
             </div>
             <div class="make-appointment__bottom">
-              <a href="#callbackwidget" class="primary-btn make-appointment__btn">
+              <a href="#" class="primary-btn make-appointment__btn">
                 Записаться на диагностику
                 <svg width="8" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 5L0 9.33V.67L6 5z" fill="#fff"/></svg>
               </a>
               <div class="make-appointment__btn-images">
                 <img
-                  alt="" 
+                  alt=""
                   src="./images/make-appointment-sertificat-1.jpg"
                   width="70" height="89" loading="lazy"
                 >

@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
-  var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+  let lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
 
   if ("IntersectionObserver" in window) {
-    var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+    let lazyVideoObserver = new IntersectionObserver(function(entries) {
       entries.forEach(function(video) {
         if (video.isIntersecting) {
-          for (var source in video.target.children) {
-            var videoSource = video.target.children[source];
+          for (let source in video.target.children) {
+            let videoSource = video.target.children[source];
             if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
               videoSource.src = videoSource.dataset.src;
             }
@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
-
 
 let ymap = document.getElementById('ymap');
 let optionsMap = {
@@ -55,8 +54,8 @@ const employeesSlider = new Swiper('.employees-slider', {
   slidesPerView: 3,
   spaceBetween: 35,
   navigation: {
-    nextEl: '#employees-slider-btn-next',
-    prevEl: '#employees-slider-btn-prev',
+    nextEl: '.employees-slider-btn-next',
+    prevEl: '.employees-slider-btn-prev',
   },
   keyboard: {
     enabled: true,
@@ -278,4 +277,4 @@ document.addEventListener("DOMContentLoaded", function () {
     phoneInput.addEventListener('input', onPhoneInput, false);
     phoneInput.addEventListener('paste', onPhonePaste, false);
   }
-})
+});
