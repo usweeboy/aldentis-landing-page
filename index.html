@@ -208,8 +208,11 @@
           <div 
             class="reviews__video"
           > 
-            <video autoplay muted loop playsinline poster="./images/hero-video-poster.jpg">
-              <source src="./images/hero-video.mp4" type="video/mp4">
+            <video class="lazy" autoplay muted loop playsinline poster="./images/hero-video-poster.jpg">
+              <source
+                data-src="./images/hero-video.mp4" 
+                type="video/mp4"
+              >
               <p>
                 Ваш браузер не поддерживает встроенные видео
               </p>
@@ -329,7 +332,6 @@
             > 
               <video class="lazy" autoplay muted loop playsinline poster="./images/specialization-video-poster.jpg">
                 <source 
-                  src="./images/specialization-video.mp4" 
                   data-src="./images/specialization-video.mp4" 
                   type="video/mp4"
                 >
@@ -1498,8 +1500,7 @@
           <div class="reviews__body">
             <div class="reviews__video"> 
               <video class="lazy" autoplay muted loop playsinline poster="./images/reviews-video-poster.jpg">
-                <source 
-                  src="./images/reviews-video.mp4" 
+                <source
                   data-src="./images/reviews-video.mp4" 
                   type="video/mp4"
                 >
