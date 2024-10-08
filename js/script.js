@@ -25,28 +25,23 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-let ymap = document.getElementById('ymap');
-let optionsMap = {
-    once: true,
-    passive: true,
-    capture: true
-};
 
-ymap.addEventListener('click', startLazyMap, optionsMap);
-ymap.addEventListener('mouseover', startLazyMap, optionsMap);
-ymap.addEventListener('touchstart', startLazyMap, optionsMap);
-ymap.addEventListener('touchmove', startLazyMap, optionsMap);
+const ymap = document.getElementById("ymap");
 
-let mapLoaded = false;
+const mapObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const lazyMap = document.getElementById('ymap-lazy');
 
-function startLazyMap() {
-  if (!mapLoaded) {
-    let mapBlock = document.getElementById('ymap-lazy');
-    mapLoaded = true;
-    mapBlock.setAttribute('src', mapBlock.getAttribute('data-src'));
-    mapBlock.removeAttribute('data_src');
-  }
-}
+      lazyMap.setAttribute("src", lazyMap.getAttribute("data-src"));
+      lazyMap.removeAttribute("data-src");
+
+      observer.unobserve(entry.target);
+    }
+  });
+}, {});
+
+mapObserver.observe(ymap);
 
 
 const employeesSlider = new Swiper('.employees-slider', {
