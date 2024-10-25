@@ -4,6 +4,7 @@
 
 * HTML
 * Препроцессор SCSS
+* Методология БЭМ
 * JS
 * SwiperJS
 * YandexMap API
