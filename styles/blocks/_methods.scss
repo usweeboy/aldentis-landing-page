@@ -165,6 +165,7 @@
   &__content {
     &-item {
       display: none;
+      scroll-margin-top: 120px;
       border-radius: 5px 30px;
       box-shadow: 0 10px 35px rgba(0, 0, 0, .1);
       background-color: var(--color-light);
@@ -396,6 +397,7 @@
       &-item {
         padding: 31px 34px 42px 33px;
         gap: 20px;
+        scroll-margin-top: 90px;
         &__body {
           flex-basis: 62%;
         }
@@ -515,6 +517,7 @@
         flex-direction: column;
         align-items: normal;
         gap: 30px;
+        scroll-margin-top: 60px;
         &__aside {
           max-width: 550px;
           margin: 0px auto;

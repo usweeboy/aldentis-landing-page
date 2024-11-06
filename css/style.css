@@ -2042,6 +2042,7 @@ body.lock {
 }
 .methods__content-item {
   display: none;
+  scroll-margin-top: 120px;
   border-radius: 5px 30px;
   -webkit-box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
           box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
@@ -2333,6 +2334,7 @@ body.lock {
   .methods__content-item {
     padding: 31px 34px 42px 33px;
     gap: 20px;
+    scroll-margin-top: 90px;
   }
   .methods__content-item__body {
     -ms-flex-preferred-size: 62%;
@@ -2458,6 +2460,7 @@ body.lock {
         -ms-flex-align: normal;
             align-items: normal;
     gap: 30px;
+    scroll-margin-top: 60px;
   }
   .methods__content-item__aside {
     max-width: 550px;
@@ -2688,6 +2691,7 @@ body.lock {
   outline-offset: -6px;
   padding: 24px 24px 30px;
   gap: 25px;
+  scroll-margin-top: 70px;
 }
 .methods__accordion-content.active {
   display: -webkit-box;

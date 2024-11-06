@@ -158,19 +158,21 @@ const openTabContent = (e) => {
 
   tabsBtn.forEach((btn) => {
     btn.classList.remove('active');
-  })
+  });
 
   tabsContent.forEach((content) => {
     content.classList.remove('active');
-  })
+  });
 
   tabTarget.classList.add('active');
   document.querySelector(`#${tab}`).classList.add('active');
+  
+  document.querySelector(`#${tab}`).scrollIntoView({ behavior: "smooth" });
 }
 
 tabsBtn.forEach((tab) => {
   tab.addEventListener('click', openTabContent)
-})
+});
 
 
 const faqBtnShowMore = document.getElementById('faq-btn-show-more');

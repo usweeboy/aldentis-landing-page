@@ -44,6 +44,7 @@
     outline-offset: -6px;
     padding: 24px 24px 30px;
     gap: 25px;
+    scroll-margin-top: 70px;
     &.active {
       display: flex;
       flex-direction: column;
