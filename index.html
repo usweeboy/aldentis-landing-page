@@ -1419,12 +1419,7 @@
                 Проведём осмотр, составим план лечения и дадим второе мнение, если вы уже были у врача.
               </p>
             </div>
-            <form class="consultation__form" action="https://api.web3forms.com/submit" method="POST">
-              <input type="hidden" name="access_key" value="4fb6a793-1238-4a99-ad45-520eab9756ef">
-              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-              <input type="hidden" name="subject" value="Новое письмо | АльДентис">
-              <input type="hidden" name="redirect" value="succes.html">
-
+            <form class="consultation__form" action="#">
               <input 
                 class="appointment__form-input consultation__form-input" 
                 placeholder="+7"
@@ -1984,12 +1979,7 @@
             <h2 class="section-top__title appointment__title">
               Задай свой вопрос доктору&nbsp;онлайн
             </h2>
-            <form class="appointment__form" action="https://api.web3forms.com/submit" method="POST">
-              <input type="hidden" name="access_key" value="4fb6a793-1238-4a99-ad45-520eab9756ef">
-              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-              <input type="hidden" name="subject" value="Новое письмо | АльДентис">
-              <input type="hidden" name="redirect" value="succes.html">
-
+            <form class="appointment__form" action="#">
               <input 
                 class="appointment__form-input"
                 name="Вопрос" 
@@ -2011,7 +2001,9 @@
                 >
                 <button type="submit" class="primary-btn appointment__form-btn">
                   Задать вопрос
-                  <svg width="8" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 5L0 9.33V.67L6 5z" fill="#fff"/></svg>
+                  <svg width="8" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 5L0 9.33V.67L6 5z" fill="#fff"/>
+                  </svg>
                 </button>
               </div>
               <div class="appointment__form-policy">
